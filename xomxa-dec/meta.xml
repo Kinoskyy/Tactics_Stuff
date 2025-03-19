@@ -1,0 +1,51 @@
+<meta>
+	<info author="xomka" name="Damage script" version="1.0" type="script"/>
+	<script src="main.lua" type="server"/>
+	<script src="client.lua" type="client"/>
+	<script src="interface_c.lua" type="client"/>
+	<file src="images/weapons/AK-47.png"/>
+	<file src="images/weapons/Bat.png"/>
+	<file src="images/weapons/Bomb.png"/>
+	<file src="images/weapons/Brassknuckle.png"/>
+	<file src="images/weapons/Cane.png"/>
+	<file src="images/weapons/Chainsaw.png"/>
+	<file src="images/weapons/Colt 45.png"/>
+	<file src="images/weapons/Combat Shotgun.png"/>
+	<file src="images/weapons/Deagle.png"/>
+	<file src="images/weapons/Death.png"/>
+	<file src="images/weapons/Dildo.png"/>
+	<file src="images/weapons/Drowned.png"/>
+	<file src="images/weapons/Explosion.png"/>
+	<file src="images/weapons/Fall.png"/>
+	<file src="images/weapons/Fire Extinguisher.png"/>
+	<file src="images/weapons/Flamethrower.png"/>
+	<file src="images/weapons/Flower.png"/>
+	<file src="images/weapons/Golfclub.png"/>
+	<file src="images/weapons/Grenade.png"/>
+	<file src="images/weapons/Katana.png"/>
+	<file src="images/weapons/Knife.png"/>
+	<file src="images/weapons/M4.png"/>
+	<file src="images/weapons/Melee.png"/>
+	<file src="images/weapons/Minigun.png"/>
+	<file src="images/weapons/MP5.png"/>
+	<file src="images/weapons/Nightstick.png"/>
+	<file src="images/weapons/Poolstick.png"/>
+	<file src="images/weapons/Rammed.png"/>
+	<file src="images/weapons/Ranover.png"/>
+	<file src="images/weapons/Rifle.png"/>
+	<file src="images/weapons/Rocket Launcher HS.png"/>
+	<file src="images/weapons/Rocket Launcher.png"/>
+	<file src="images/weapons/Rocket.png"/>
+	<file src="images/weapons/Satchel.png"/>
+	<file src="images/weapons/Sawed-off.png"/>
+	<file src="images/weapons/Shotgun.png"/>
+	<file src="images/weapons/Shovel.png"/>
+	<file src="images/weapons/Silenced.png"/>
+	<file src="images/weapons/Sniper.png"/>
+	<file src="images/weapons/Spraycan.png"/>
+	<file src="images/weapons/Teargas.png"/>
+	<file src="images/weapons/Tec-9.png"/>
+	<file src="images/weapons/UZI.png"/>
+	<file src="images/weapons/Vibrator.png"/>
+	<file src="sounds/ding_a_ling.wav"/>
+</meta>
