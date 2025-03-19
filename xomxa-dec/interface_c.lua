@@ -95,10 +95,10 @@ end
 
 function onPlayerWasted(attacker, weapon, bodypart)
     if source == localPlayer and damageList[1] and damageList[1].attacker == attacker and damageList[1].weapon == weapon then
-        damageList[1].damageText = damageList[1].damageText .. " (wasted)"
+        damageList[1].damageText = damageList[1].damageText .. " - wasted"
         damageList[1].noAdd = true
     elseif attacker == localPlayer and hitList[1] and hitList[1].victim == source and hitList[1].weapon == weapon then
-        hitList[1].damageText = "(kill) " .. hitList[1].damageText
+        hitList[1].damageText = "kill " .. hitList[1].damageText
         hitList[1].noAdd = true
     end
 end
