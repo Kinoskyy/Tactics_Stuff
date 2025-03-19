@@ -15,7 +15,7 @@ function onClientPlayerDamage(attacker, weapon, bodypart, loss)
     end
 end
 
---[[function toggleDingSound(command, state)  (Bugeado)
+--[[function toggleDingSound(command, state) -- BUGEADO
     if state then
         if state == "on" then
             enableDingSound = true
