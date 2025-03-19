@@ -2,6 +2,10 @@ local screenW, screenH = guiGetScreenSize()
 local damageList = {} 
 local hitList = {}
 
+function removeColorCoding(name)
+    return type(name) == "string" and name:gsub("#%x%x%x%x%x%x", "") or name
+end
+
 function fadeHitOverlays()
     for i, entry in ipairs(damageList) do
         entry.visibility = entry.visibility - 2
@@ -56,7 +60,7 @@ function onPlayerDamage(attacker, weapon, bodypart, loss)
             if attacker and getElementType(attacker) == "vehicle" then
                 attacker = getVehicleController(attacker)
             end
-            damageList[1].name = (attacker and attacker ~= localPlayer) and getPlayerName(attacker) or ""
+            damageList[1].name = (attacker and attacker ~= localPlayer) and removeColorCoding(getPlayerName(attacker)) or ""
             damageList[1].damageText = "- " .. string.format("%.2f", damageList[1].damage)
         else
             table.remove(damageList, 5)
@@ -65,7 +69,7 @@ function onPlayerDamage(attacker, weapon, bodypart, loss)
                 weapon = weapon,
                 damage = loss,
                 visibility = 255,
-                name = (attacker and getElementType(attacker) == "player" and attacker ~= localPlayer) and getPlayerName(attacker) or "",
+                name = (attacker and getElementType(attacker) == "player" and attacker ~= localPlayer) and removeColorCoding(getPlayerName(attacker)) or "",
                 damageText = "- " .. string.format("%.2f", loss)
             })
         end
@@ -77,7 +81,7 @@ function onPlayerHit(attacker, weapon, bodypart, loss)
         if hitList[1] and not hitList[1].noAdd and hitList[1].victim == source and hitList[1].weapon == weapon then
             hitList[1].damage = hitList[1].damage + loss
             hitList[1].visibility = 255
-            hitList[1].name = getPlayerName(source)
+            hitList[1].name = removeColorCoding(getPlayerName(source))
             hitList[1].damageText = "+ " .. string.format("%.2f", hitList[1].damage)
         else
             table.remove(hitList, 5)
@@ -86,7 +90,7 @@ function onPlayerHit(attacker, weapon, bodypart, loss)
                 weapon = weapon,
                 damage = loss,
                 visibility = 255,
-                name = getPlayerName(source),
+                name = removeColorCoding(getPlayerName(source)),
                 damageText = "+ " .. string.format("%.2f", loss)
             })
         end
@@ -102,7 +106,6 @@ function onPlayerWasted(attacker, weapon, bodypart)
         hitList[1].noAdd = true
     end
 end
-
 setTimer(fadeHitOverlays, 50, 0)
 addEventHandler("onClientPreRender", root, drawHitTexts)
 addEventHandler("onClientPlayerDamage", localPlayer, onPlayerDamage)
@@ -123,8 +126,8 @@ end
 function drawCopyright()
     local y = screenH - 30
     local x = screenW - 5
-    dxDrawText("Damage script decompiled by Kinoskyy", x + 2, y - 16, x + 2, y - 16, tocolor(0, 0, 0, 255), 1, "default-bold", "right", "top")
-    dxDrawText("Damage script decompiled by Kinoskyy", x + 1, y - 15, x + 1, y - 15, tocolor(255, 0, 255, copyrightAlpha), 1, "default-bold", "right", "top")
+    dxDrawText("Damage script decompiled by Kino", x + 2, y - 16, x + 2, y - 16, tocolor(0, 0, 0, copyrightAlpha), 1, "default-bold", "right", "top")
+    dxDrawText("Damage script decompiled by Kino", x + 1, y - 15, x + 1, y - 15, tocolor(140, 140, 140, copyrightAlpha), 1, "default-bold", "right", "top")
 end
 copyrightTimer = setTimer(fadeCopyright, 50, 0)
 addEventHandler("onClientRender", root, drawCopyright)
