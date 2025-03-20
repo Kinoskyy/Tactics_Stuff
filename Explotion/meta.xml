@@ -1,0 +1,5 @@
+<meta>
+	<info author="1ZeemTv decompiled by Kino" version="1.1" type="script" />
+	<script src="expl_S.lua" type="server"/>
+	<script src="expl_C.lua" type="client"/>
+</meta>
