@@ -1,0 +1,5 @@
+﻿<meta>
+	<info author="NAW" version="1.0" type="script" name="Head Weapon Damage - Score"  />
+	<script src="client.lua" type="client" cache=false />
+	<script src="server.lua" type="server" />
+</meta>
