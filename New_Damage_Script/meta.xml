@@ -1,0 +1,8 @@
+<meta>
+	<info author="Kino" name="Damage script" version="1.0" type="script"/>
+	<script src="server.lua" type="server"/>
+	<script src="client.lua" type="client"/>
+	<script src="interfaz.lua" type="client"/>
+   	<file src="futura.ttf"/>
+	<file src="campanota.mp3"/>
+</meta>
