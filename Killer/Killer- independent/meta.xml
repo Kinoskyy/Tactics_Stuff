@@ -1,5 +1,6 @@
 <meta>
 	<info name ="killer script" version="1.0" type="script" author="Kino"/>
- 	   <script src="killer.lua" type="client" />
+ 	<script src="killer.lua" type="client" />
+	<script src="server.lua" type="server" />
 	<file src="futura.ttf"/>
 </meta>
