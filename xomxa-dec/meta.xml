@@ -1,5 +1,5 @@
 <meta>
-	<info author="xomka" name="Damage script" version="1.0" type="script"/>
+	<info author="xomka + Kino" name="Damage script" version="1.0" type="script"/>
 	<script src="main.lua" type="server"/>
 	<script src="client.lua" type="client"/>
 	<script src="interface_c.lua" type="client"/>
